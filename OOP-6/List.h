@@ -16,6 +16,7 @@ public:
 	Node<TT>* node;
 	Iter();
 	Iter(const Iter<TT>& it);
+	~Iter() { }
 	Iter& operator=(const Iter<TT>& a);
 	TT& operator*() const;
 	Iter& operator+ (const int& a);
@@ -24,6 +25,7 @@ public:
 template <typename TT>
 class List
 {
+protected:
 	int size;
 	Node<TT>* head = nullptr;
 	Node<TT>* tail = nullptr;
